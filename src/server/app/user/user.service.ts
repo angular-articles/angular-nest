@@ -1,4 +1,4 @@
-import { BadRequestException, Injectable } from '@nestjs/common';
+import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { JwtService } from '@nestjs/jwt';
 
@@ -11,6 +11,7 @@ import { ReadUserDto } from "./dto/read-user.dto";
 import { UpdateUserDto } from "./dto/update-user.dto";
 import { UserEntity } from './user.entity';
 import { UserModel } from '../shared/interfaces/user.interface';
+import { BadRequestException } from '../shared/classes';
 
 
 @Injectable()
