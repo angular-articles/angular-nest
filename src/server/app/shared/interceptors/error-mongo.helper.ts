@@ -1,6 +1,8 @@
 import { HttpStatus } from "@nestjs/common";
 
-export function ErrorMongoHelper(code, controller?: string, method?: string) {
+import { errorType } from '../interfaces/json-api';
+
+export function ErrorMongoHelper(code, controller?: string, method?: string): { errors: errorType[] } {
     switch (code) {
         case ('user not found by email'):
             return {

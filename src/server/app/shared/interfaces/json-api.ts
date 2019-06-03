@@ -11,7 +11,7 @@ interface source {
 
 type dataType = object[] | object
 
-type errorType = {
+export type errorType = {
     status: string;
     code: number;
     title: string;
@@ -25,6 +25,11 @@ interface data extends base {
 
 interface errors extends base {
     errors: errorType[];
+}
+
+export interface JsonApiArgs {
+    data?: dataType;
+    errors?: errorType[];
 }
 
 export type JsonApiResponse = data | errors;
